@@ -62,6 +62,36 @@
     transition: background-color 0.3s;
 }
 
-.countdownButton:hover {
+.countdownButton:not(:disabled):hover {
     background: var(--blue-dark);
 }
+
+.countdownButtonActive {
+    background-color: var(--white);
+    color: var(--title);
+    box-shadow: 0px 5px var(--red);
+}
+
+.countdownButtonActive img {
+    width: 2rem;
+    padding-top: 1rem;
+}
+
+.countdownButtonActive:not(:disabled):hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.countdownButton:disabled {
+    background: var(--white);
+    color: var(--text);
+    cursor: not-allowed;
+    box-shadow: 0px 5px var(--green);
+}
+
+.countdownButton:disabled img {
+    padding-left: 1rem;
+    width: 2.5rem;
+}
+
+
